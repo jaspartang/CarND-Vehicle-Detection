@@ -85,3 +85,8 @@ Here's an example result showing the heatmap from a series of frames of video, t
 My pipeline doesn't did very well as i expect, i think it still has chance to improving. It may also can't work well under different lighting conditions or weather conditions, and due to the CPU limit, it costs nearly 30m to produce the ouput result.
 Maybe deep learning appoach could be a goog start point, or ignore the left region, may improve the result, but not generic anymore.
 
+There are some improvment we can do list below:
+* Regarding the parameter C, as we need more generalization (usually the training and test accuracy is high enough), 
+you can try to use C less than 1.0 values. 0.1, 0.01 or even 0.0001.
+* Also, we can apply negative mining: cut out the false positives from the video, and add them to the training set as non-vehicles.
+
